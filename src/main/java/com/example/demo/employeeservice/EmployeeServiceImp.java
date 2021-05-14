@@ -2,11 +2,10 @@ package com.example.demo.employeeservice;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.dao.EmployeeDao;
 import com.example.demo.entites.Employee;
@@ -16,13 +15,6 @@ public class EmployeeServiceImp  implements EmployeeService{
 
 	@Autowired
 	private EmployeeDao employeeDao;
-	//List<Employee> list;
-	public  EmployeeServiceImp() {
-		
-		
-           /* list = new ArrayList<>();
-            list.add(new Employee(1,"priya","23","20-03-97",928171));*/
-	}
 	
 	
 	@Override
@@ -65,5 +57,39 @@ public class EmployeeServiceImp  implements EmployeeService{
 
 
 	
+	
+	
+	
 
+
+	
+	
+	
+
+
+	/*@Override
+	public List<Employee> getEmployeeDetails(Employee emp) {
+	
+		employeeDao.getEmpDetails();
+		return emp;
+	}*/
+
+	/*public List<Employee> getEmployeeDetails(Employee emp){
+	List<Employee> list = new ArrayList<Employee>();
+	List<Object[]> obj = employeeDao.getEmpDetails();
+	for(Object[] res : obj) {
+		Employee e = new Employee();
+		e.setName(res[4].toString());
+		e.setAge(res[1].toString());
+		e.setDob(res[3].toString());
+		list.add(e);
+	}
+	return list;
+
+}
+     
+	*/
+	
+	
+	
 }

@@ -5,12 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@ComponentScan("com.example.demo")
+//@RestController("com.example.demo.controller")
 
-/*@ComponentScan({ "com.example.demo.controller","com.example.demo.employeeservice"})
-@EnableJpaRepositories("com.example.demo.Repository")
-@EntityScan("com.example.demo.entities")*/
 public class CurdOperationForSpringbootApplication {
 
 	public static void main(String[] args) {

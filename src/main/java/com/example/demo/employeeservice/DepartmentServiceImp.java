@@ -16,9 +16,25 @@ package com.example.demo.employeeservice;
 	return departmentDao.findAll();
 	}
 
-	public Department addDepartment(Department dept) {
-	return departmentDao.save(dept);
+	public String addDepartment(Department dept) {
+	    Department dp = new Department();
+	    String message = "";
+		long depts= departmentDao.getDepartmentCount();
+		if(depts<=10) {
+			dp =departmentDao.save(dept);
+		}
+		else {
+			message = "More then 10 records not allowed";
+		}
+		
+	return message;
 	}
 
+	/*public Department adDepartment(Department dept) {
+		long depts= departmentDao.getDepartmentCount();
+		System.out.println(depts);
+		return null;
+	*/
+	//}
 	}
 

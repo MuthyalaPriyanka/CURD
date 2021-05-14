@@ -17,14 +17,14 @@ import com.example.demo.entites.Department;
 	@Autowired
 	private DepartmentServiceImp departmentService;
 
-	@GetMapping("/department")
+	@GetMapping("/getintodept")
 
 	public List<Department> getAllDepartment() {
 	return this.departmentService.getAllDepartment();
 	}
 
-	@PostMapping("/dept")
-	public Department addDepartment(@RequestBody Department dept) {
+	@PostMapping("/putintodept")
+	public String addDepartment(@RequestBody Department dept) {
 	return this.departmentService.addDepartment(dept);
 
 	}
